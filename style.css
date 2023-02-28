@@ -1,0 +1,272 @@
+*{ /* 1° -Zerando as margens*/
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box ;  
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth; /*NAvegar nas pag mais suave*/
+    /*Alguns não tem está função. no cromo basta digitar: cromo://flags - pesquisar smmoth e ativar*/
+}
+
+/*inicio HEADER -Menu*/
+
+.nav{
+    background-color: #181818; /*Fundo da class nav*/
+    height: 80px; /*Altura da class nav*/
+    width: 100%; /*Acompanhar a largura da pagina */
+    display: flex; /*Para manupular os elementos dentro da class nav */
+    justify-content: flex-end; /*Alinhando o texto do menu direita da nav-list-ul*/
+
+    position: sticky; /*Deixar o menu fixo na tela*/
+    top: 0; /*Deixar ele grudado mo top*/
+    z-index: 9; /*Ele ira sobrepor por cima de todos - z-index- se tiver*/
+}
+
+.nav-list-ul{
+    display: flex;
+    align-items: center; /*Alinhando o texto para o centro da box*/
+    list-style: none; /*Tirando as bolinhas*/
+    margin-right: 24px; /*Espaçamento entre o final da tela em relação ao texto do menu*/
+}
+
+.nav-list-ul a{
+        text-decoration: none; /*Retirando a linha de baixo do texto do menu*/
+        color: #ddd; /*Cor da fonte do texto do menu*/
+        padding: 20px; /* Espaçamento internos dos textos do menu*/
+
+}
+
+.nav-list-ul a:hover{ /*Propriedade para mudar o mouse, quando passar por cima do elemento*/
+    color: #ffffff;
+
+} 
+
+/*Fim HEADER*/
+
+/*Incio Main*/
+
+.main{
+    width: 100%; /*Largura da pagina 100%*/
+    background-color: #000;
+    height: calc(100vh - 80px);/*Altura da tela 100% - Considerando o cabeçalho e sem colocar o scrow */
+    background-image: url("images/programador.png"); /*Foto de fundo*/
+
+    display: flex; /*Mexer com a posição dentro do da caixa box*/
+    align-items: center;/*Centralizar o texto do main para o centro da tela*/
+    padding-left: 10%; /*Espaçamento interno a esquerda da margem*/
+}
+
+.main h1{
+    color: #ffffff; /*cor da fonte*/
+    font-size: 54px; /*tamanho da fonte*/
+}
+
+.main p {
+    font-size: 24px; /*Tamanho da fonte*/
+    font-style: italic; /*Estilo da fonte*/
+    color: #1e96fc; /*Cor da fonte*/
+    margin-top: 10px; /*margem de cima*/
+    margin-bottom: 35px; /*margem de baixo */    
+}
+
+.botao{
+    cursor: pointer; /*Trocar o couser do mouse para dedo*/
+    background-color: #ffffff;
+    border: 0; /*Borda do botão*/
+    padding: 14px; /*Tamanho da caixa interna*/
+    border-radius: 4px; /*Arredondar a borda*/
+    font-size: 14px;/*Aumentar a fonte do texto*/
+    font-weight: bold; /*Deixar em negrito*/
+    transition: 0.9s;  /*Efeito so bobre o botão- Tempo de executar o recurso de aumentar a escala*/
+}
+
+.botao:hover{ /*Efeito sobre o botão*/
+    transform: scale(1.2);  /*Aumenta a escala quando passar o cursor por cima*/
+}
+
+.main a{
+    text-decoration: none; /*Tirar o assumblinhado*/
+    color: #181818; /*cor da fonte*/
+}
+
+/*Fim Main*/
+
+/*INICIO About*/
+
+.about{
+    background-color: #ffffff;
+    width: 100%; /*Tamanho da pag*/
+    padding-left: 10%; /*Espaçamento interno a esquerda*/
+    padding-right: 10%; /*Espaçamento interno a direira*/
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    display: flex;
+    align-items: center; /*Dentro do display flex tudo vai ficar no centro*/
+    justify-content: space-between; /*Espaço entre eles*/
+}
+
+.about div{
+    max-width: 50%; /*o h2 e p não vai ser maior que 50%*/
+    padding-right: 40px; /*Distancia entre a imagem e o texto*/
+}
+
+.about img{ 
+    max-width: 450px; /*O tamanho da img não vai passar de 450px*/
+    border-radius: 8px; /*Aredondando as bordas*/
+}
+
+.about div h2{
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+/*Fim do About*/
+
+/*Inicio Porject*/
+
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column; /*Deixar as imagens em colunas*/
+    align-items: center; /*Alinhando a coluna - vertical*/
+    justify-content: center; /*Alinhamento da linha - horizontal*/
+    padding: 80px 0 ; /*Quanto encima e abaixo vai receber 80px e Direita e Esquerda 0 */
+}
+
+.projects h2{
+    font-size: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.projects p{
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.projects-list{ /*Garantindo que as img vai ficar um ao lado do outro*/
+    width: 100%;/*Ela vai ocupar 100% da div*/
+    margin-bottom: 8px;
+
+    display: flex;
+    justify-content: center; /*coluna centralizada*/
+    align-items:center; /*linha centralizada*/
+}
+
+.projects img{
+    width: 22%; /*Tamanho das imgens vai ficar */
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    opacity: 0.8; /*Nitides da imagem*/
+    transition: 0.9s; /*Tempo de gasto para a imagem aparecer nítida*/
+}
+.projects img:hover{/* Quando passar o mouse nas imagens*/
+    opacity: 1; /*Imagem aparece com 100% de nitides*/
+
+}
+
+.action{
+    background-color: #181818;
+    border: 0;
+    padding: 12px 28px; /*Espaçamento interno do botão*/
+    border-radius: 4px;
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 18px;
+    cursor: pointer; /*Maozinha do mouse no botão*/
+}
+/*FIM PROJECTS*/
+
+/*INICIO RODAPE*/
+
+footer{
+    width: 100%;
+    background-color: #181818;
+    padding: 40px 0; /*Tamanho do rodape "tag"*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+footer a{
+    text-decoration: none; /*Retirando o sublinhado*/
+    color: #ffffff;
+}
+footer p{
+    margin-left: 12px;
+}
+/*Fim RODAPE*/
+
+/*Responsividade*/
+ @media (max-width: 800px){ /*Até este pix da tela, ele irá usar as configuração a baixo*/
+
+    /*Inicio Main*/
+    .main h1{
+        font-size: 40px;
+    }
+     .main p{
+        font-size: 15px;
+     }
+
+     .main{
+        background-size: cover; /*Ele tentar encaixar a img do tamanho melhor para tela*/
+     }
+     /*Fim Main*/
+
+     /*Sobre*/
+     .about{
+        flex-direction: column; /*Mudando a posição da img e passando as margens*/
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+     }
+     .about div{
+        max-width: 80%; /*Retirando as limitações da img com o texto. Não vai precisar mais*/
+     }
+
+     .about div h2{
+        font-size: 45px;
+     }
+
+     .about img{
+        width: 80%; /*tamaho da img*/
+        margin-top: 30px; /*Desgrudando a img do texto*/
+     }
+     /*fim do sobre*/
+
+     /*Inicio Projeto*/
+
+     .projects img{
+        width: 27.5%;
+     }
+     /*Fim projeto*/
+
+     /*Inicio rodape*/
+
+     footer{
+        flex-direction: column; /*Deixar o texto um encima do outro*/
+     }
+     footer h3{
+        font-size: 24px;
+        margin-bottom: 8px;
+     }
+
+     footer p{
+        margin: 0;
+     }
+
+     /*Fim rodaper*/
+
+
+
+}
